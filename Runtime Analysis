@@ -1,0 +1,53 @@
+Runtime Analysis
+Vector	Line Cost	Times Executed	Total cost
+Create vector	1	1	1
+Each line in file	1	n	n
+Create vector course item	1	n	n
+Create vector	1	1	1
+While prerequisites exists	1	n	n
+Append Prerequisites	1	n	n
+Pushback Course Item	1	n	n
+Total Cost			5n + 1
+Runtime			O(n)
+
+Hash Table	Line Cost	Times Executed	Total Cost
+Create Hash Table	1	1	1
+Insert method	0	0	0
+Create key for course	1	n	n
+If no entry found for key	1	n	n
+Assign node to key	1	n	n
+Else	1	n	n
+Assign old node key to UNIT_MAX, set node to course, and node next to nullptr	4	n	4n
+else	1	n	n
+Find next open node	1	n	n
+Add new node to end	1	n	n
+For each line in file	1	n	n
+Create vector course item	1	n	n
+While prerequisites exist	1	n	n
+Append prerequisites	1	n	n
+Insert course item	1	n	n
+Total Cost			16n+1
+Runtime			O(n)
+
+
+
+
+
+Tree	Line Cost	Times Executed	Total Cost
+Create Tree	1	1	1
+Add node method	0	0	0
+If root is null add root	1	1	1
+If node less than root add left	1	n	n
+If no node left	1	n	n
+Node is node left	1	n	n
+If node greater than root add right	1	n	n
+If no node right	1	n	n
+Node is node right	1	n	n
+For each line in file	1	n	n
+Create vector course item	1	n	n
+While prerequisite exists	1	n	n
+Append prerequisite 	1	n	n
+Insert course item	1	n	n
+Total cost			11n+2
+Runtime			O(n)
+
